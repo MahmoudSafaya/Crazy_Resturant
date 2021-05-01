@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+
+$dark: #1C232D;
+$light_dark: #001845;
+$blue: #0466c8;
+$dark_blue: #023e7d;
+$light_gray: #dddddd;
+$dark_gray: #5c677d;
+$very_dark_gray: #33415c;
+$white: #fff;
+
+$small_font_size: 14px;
+
+$small_m: 10px;
+$m: 20px;
+$m_t_b: 20px 0px;
+$center_m: 0px auto;
+$big_m: 100px 0px;
+
+$p: 20px;
+$small_p: 10px;
+$center_p: 10px 25px;
+
+$big_p: 80px 0;
+
+$text_center: center;
+
+ul{
+  list-style: none;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: $light_gray;
+  font-size: $small_font_size;
+}
+
+button{
+  padding: $center_p;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: $blue;
+  color: $white;
+
+  &:hover{
+    background: $dark_blue
+  }
+}
+
+p{
+  font-size: $small_font_size;
+  margin: $m_t_b;
+  line-height: 1.7;
+}
+
+.container{
+  width: 67%;
+  margin: $center_m;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+i{
+  font-size: 12px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.under{
+  width: 100%;
+  height: 85%;
+  z-index: -10;
+  border: 25px solid $blue;
+  position: absolute;
+}
+
+.hide_shit{
+  display: none;
+}
+
+.active_button{
+  background: $dark;
+  border: 2px solid $blue;
+}

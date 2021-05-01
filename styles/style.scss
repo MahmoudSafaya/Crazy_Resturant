@@ -1,0 +1,716 @@
+@import 'variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Exo 2', sans-serif;
+  background: $dark;
+}
+
+//the up header
+.up_header{
+  background: $white;
+  width: 100%;
+  padding: $small_p;
+
+  span{
+    font-size: 12px;
+    margin: 0 30px 0 5px;
+  }
+}
+
+//logo and nav
+header{
+  background: $dark;
+  padding: $p;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.3s linear;
+
+  .container{
+    h1{
+      color: $white;
+    }
+
+    li{
+      display: inline;
+      margin: 0 $m;
+      cursor: pointer;
+
+      &:hover{
+        a{
+          color: $blue;
+          text-decoration: underline;
+        }
+      }
+
+      button{
+        color: $light_gray;
+        border: 2px solid $blue;
+        padding: $center_p;
+        background: $dark;
+        &:hover{
+          background: $blue;
+        }
+      }
+    }
+  }
+}
+
+//under logo and nav
+.main_box{
+  height: 609px;
+  padding-top: 40px;
+  margin: 100px 0 0px;
+
+  .left{
+    h1{
+      color: $white;
+      font-size: 52px;
+      margin: $m_t_b;
+    }
+  
+    p{
+      color: $light_gray;
+    }
+  }
+
+  .right{
+    position: relative;
+
+    img{
+      margin: 50px 0 0 -50px;
+      z-index: 10;
+    }
+  }
+}
+
+//about box style
+.about_box{
+  padding: $big_p;
+  background: $white;
+
+  .left{
+    width: 30%;
+    position: relative;
+
+    .under{
+      z-index: 1;
+    }
+
+    img{
+      z-index: 10;
+      margin: 50px 0 0 50px;
+      position: relative;
+    }
+  
+  }
+
+  .right{
+    width: 52%;
+    h3{
+      color: $very_dark_gray;
+      margin: $small_m 0px;
+    }
+
+  }
+}
+
+//services style
+.services{
+  padding: $big_p;
+  text-align: $text_center;
+  background: $white;
+
+  h1{
+    margin: 40px 0px;
+  }
+  .container{
+    justify-content: space-around;
+
+    .service{
+      cursor: pointer;
+      padding: 20px 20px 0px;
+      width: 13%;
+
+      &:hover{
+        background: $blue;
+        border-radius: 5px;
+
+        i{
+          color: $light_gray;
+        }
+      }
+
+      i{
+        display: block;
+        font-size: 50px;
+        color: $blue;
+      }
+  
+      h1{
+        color: $light_dark
+      }
+    }
+  }
+}
+
+//menu food style
+.menu{
+  text-align: $text_center;
+  padding: $big_p;
+
+  .top_menu_section{
+    h1{
+      margin: $m_t_b;
+      color: $white;
+    }
+
+    button{
+      margin: 20px;
+      width: 160px;
+    }
+  }
+  hr{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -40px;
+    background: #fff;
+    height: 1px;
+  }
+}
+
+//food_menu_slider
+.food_menu_slider{
+  margin-top: 60px;
+  width: 100%;
+  background: $white;
+  border:1px solid #ddd;
+  border-top: 40px solid #ddd;
+
+  .menu_img{
+    width: 30%;
+
+    img{
+      margin: 0 0 -5px -2px;
+    }
+  }
+
+  .menu_info{
+    width: 70%;
+    padding: 20px 20px 10px;
+
+    .slider{
+
+      .slider_all_images{
+        display: inline-block;
+
+        .slider_img{
+          width: 27%;
+          margin: $small_m;
+          display: inline-block;
+
+          img{
+            height: 130px;
+            box-shadow: 1px 1px 10px #333;
+          }
+
+          p{
+            margin: 10px 0 5px;
+          }
+          span{
+            color: rgb(23, 161, 23);
+            display: block;
+            margin: 5px;
+            font-weight: bold;
+          }
+
+
+        }
+      }
+    }
+
+    button{
+      margin-top: 10px;
+    }
+  }
+
+}
+
+.food_menu_slider .food_menu_box{
+  display: none;
+   &:first-of-type{
+     display: flex;
+   }
+}
+
+
+
+//events
+.events{
+  background: $white;
+  text-align: $text_center;
+  padding: $big_p;
+
+  h1{
+    font-size: 32px;
+    margin: $m;
+  }
+
+  .event_divs{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    .event{
+      margin: 20px;
+      
+      .event_content{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: $light_gray;
+        background: rgba(0,0,0,0.6);
+        padding: 60px 0;
+        text-align: $text_center;
+      }
+
+      &:first-of-type{
+        background: url('../images/event1.jpg');
+        background-size: cover;
+      }
+
+      &:nth-of-type(2){
+        background: url('../images/event8.jpg');
+        background-size: cover;
+      }
+
+      &:nth-of-type(3){
+        background: url('../images/event2.jpg');
+        background-size: cover;
+      }
+
+      &:nth-of-type(4){
+        background: url('../images/event5.jpg');
+        background-size: cover;
+      }
+      &:nth-of-type(5){
+        background: url('../images/event6.jpg');
+        background-size: cover;
+      }
+      &:nth-of-type(6){
+        background: url('../images/event7.jpg');
+        background-size: cover;
+      }
+    }
+  }
+}
+
+
+//offers
+.offers{
+  .container{
+    justify-content: space-around;
+
+    .left{
+      width: 45%;
+
+      p:first-of-type{
+        font-size: 16px;
+        font-weight: bold;
+
+        &:nth-of-type(2){
+          font-size: 12px;
+        }
+      }
+
+    }
+
+    .right{
+      width: 30%;
+    }
+  }
+}
+
+
+//blogs
+.blogs{
+  background: $white;
+  padding: $big_p;
+  text-align: $text_center;
+
+  h1{
+    margin: $m_t_b;
+    font-size: 32px;
+  }
+
+  .blog{
+    width: 27%;
+    border: 1px solid rgb(202, 202, 202);
+    margin: 15px;
+    display: inline-block;
+    p{
+      line-height: 1.2;
+    }
+
+    .blog_info{
+      padding: $p;
+
+    }
+  }
+
+  
+}
+
+
+//footer
+footer{
+  padding: $big_p;
+  color: $light_gray;
+
+  .container{
+    align-items: start;
+    width: 900px
+  }
+
+  .with_logo{
+    width: 27%
+  }
+
+  div{
+    margin: 10px 0;
+  }
+  p{
+    margin: 2px;
+    cursor: pointer;
+  }
+}
+
+.footer{
+  background: #010101;
+  color: $light_gray;
+
+  .container{
+    width: 900px;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  .container{
+    width: 90%;
+  }
+  //the up header
+  .up_header{
+    padding: 5px;
+
+    .hide_shit{
+      display: block;
+    }
+    .right{
+      width: 36%;
+      margin-left: 10px;
+    }
+
+    span{
+      margin: 5px 0;
+    }
+  }
+
+  //logo and nav
+  header{
+    .container{
+      flex-direction: column;
+      ul{margin: 20px 0px;}
+      li{
+        margin: 0 5px;
+
+        button{
+          display: none;
+        }
+      }
+    }
+  }
+
+  //under logo and nav
+  .main_box{
+    height: 490px;
+    padding-top: 15px;
+
+    .left{
+      width: 90%;
+      margin: 0 auto;
+      border: 17px solid $blue;
+      padding: 40px 15px;
+      margin-top: 40px;
+
+      h1{
+        font-size: 34px;
+      }
+    }
+
+    .right{
+      display: none;
+    }
+  }
+
+  //about box style
+  .about_box{
+    padding-bottom: 40px;
+    .left{
+      display: none;
+    }
+
+    .right{
+      width: 90%;
+      margin: 0 auto;
+      padding: 40px 15px;
+      h3{
+        font-size: 34px;
+        color: $dark;
+      }
+      p{
+        letter-spacing: 1px;
+      }
+
+    }
+  }
+
+  //services style
+  .services{
+    padding: 40px 0 60px;
+
+    .container{
+      display: block;
+
+      .service{
+        width: 48%;
+        display: inline-block;
+
+        i{
+          font-size: 40px;
+        }
+
+        h1{
+          margin: 0px;
+        }
+      }
+    }
+  }
+
+  //menu food style
+  .menu{
+    padding: $big_p;
+    width: 90%;
+    margin: 0 auto;
+
+    hr{
+      width: 1px;
+      margin-top: -260px;
+      height: 70%;
+      z-index: -1;
+      height: 230px;
+    }
+  }
+
+  //food_menu_slider
+  .food_menu_slider{
+    margin-top: 60px;
+    width: 100%;
+    background: $white;
+    border:1px solid #ddd;
+    border-top: 40px solid #ddd;
+
+    .menu_img{
+      display: none;
+    }
+
+    .menu_info{
+      width: 100%;
+      padding: 20px;
+
+      .slider{
+
+        .slider_all_images{
+          display: block;
+
+          .slider_img{
+            width: 85% !important;
+            margin: $m;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  //events
+  .events{
+    .event_divs{
+      display: grid;
+      grid-template-columns: auto;
+
+      .event{
+        margin: 10px;
+      }
+    }
+  }
+
+  //offers
+  .offers{
+    width: 90%;
+    height: auto;
+    padding: 40px 0px;
+    margin: 0 auto;
+
+    .container{
+      .left{
+        width: 100%;
+      }
+      .right{
+        display: none;
+      }
+    }
+  }
+
+  //blogs
+  .blogs{
+    .blog{
+      width: 90%;
+      display: block;
+      margin: 25px auto;
+    }
+  }
+
+  //footer
+  footer{
+    padding: 40px 0;
+    .container{
+      align-items: start;
+      flex-direction: column;
+      width: 90%;
+      text-align: $text_center;
+    }
+    .with_logo{
+      width: 100%;
+    }
+    div{
+      width: 100%;
+    }
+  }
+
+  .footer{
+  
+    .container{
+      width: 90%;
+      flex-direction: column;
+      p{
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 996px) {
+
+  .container{
+    width: 90%;
+  }
+  //logo and nav
+  header{
+    .container{
+      li{
+        margin: 0 5px;
+      }
+    }
+  }
+
+  //services style
+  .services{
+    .container{
+      .service{
+        width: 50%;
+      }
+    }
+  }
+
+  //menu food style
+  .menu{
+    .top_menu_section{
+      button{
+        margin: 10px;
+      width: 150px;
+      }
+    } 
+    hr{
+      display: none;
+    }
+  }
+
+  //food_menu_slider
+  .food_menu_slider{
+    .menu_img{
+      display: none;
+    }
+    .menu_info{
+      width: 100%;
+      .slider{
+        .slider_all_images{
+          .slider_img{
+            width: 29%;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  //offers
+  .offers{
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  //footer
+  footer{
+    .container{
+      width: 90%;
+    }
+  }
+
+  .footer{
+  
+    .container{
+      width: 90%;
+    }
+  }
+
+
+}
+
+
+.animate{
+  animation: animate 1s linear;
+}
+
+@keyframes animate{
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
